@@ -1,0 +1,28 @@
+@import "../common/variables.scss";
+
+.button {
+    background-color: transparent;
+    border: none;
+    border: 1px solid $lightgrey;
+    padding: 10px;
+    border-radius: 4px;
+    width: 150px;
+    font-weight: 400;
+    color: $darkorange;
+    margin: 10px;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid $darkorange;
+        background-color: $darkorange;
+        background-color: rgba(255, 166, 0, 0.034);
+    }
+
+    &.filled {
+        background-color: $orange;
+        border: none;
+        color: white;
+        &:hover {
+            background-color: $darkorange;
+        }
+    }
+}

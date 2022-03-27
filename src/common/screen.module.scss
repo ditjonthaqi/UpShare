@@ -1,0 +1,39 @@
+@import "../common/variables.scss";
+
+.screen {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    height: calc(100vh - 90px);
+    width: 100%;
+    margin: auto;
+    justify-content: space-evenly;
+    margin: auto;
+    align-items: center;
+    .left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 90%;
+
+        h1,
+        p {
+            max-width: 300px;
+        }
+    }
+
+    .buttons {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    img {
+        flex: 1;
+    }
+    transition: display 0.5s ease;
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,13 @@
+@import "../common/variables.scss";
+
+.footer {
+    display: flex;
+    // position: fixed;
+    // top: auto;
+    align-items: center;
+    height: 30px;
+    justify-content: center;
+    bottom: 10px;
+    width: 100%;
+    color: $textcolor;
+}

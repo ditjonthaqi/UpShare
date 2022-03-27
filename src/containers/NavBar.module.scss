@@ -1,0 +1,26 @@
+@import "../common/variables.scss";
+.nav-bar {
+    max-width: 100%;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    background-color: $allmostwhite;
+    bottom: auto;
+    height: 70px;
+    box-shadow: 0px 0px 7px -3px #111;
+    display: flex;
+    justify-content: space-between;
+    & li {
+        text-decoration: none;
+        width: 100px;
+        background-color: $allmostwhite;
+        &:hover {
+            background-color: $lightgrey;
+        }
+        a {
+            text-decoration: none;
+            color: $grey;
+        }
+    }
+}

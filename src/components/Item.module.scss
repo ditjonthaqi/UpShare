@@ -1,0 +1,14 @@
+@import "../common/variables.scss";
+.wrapper {
+    background-color: $lightgrey;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $textcolor;
+    border-radius: 5px;
+    &:hover {
+        background-color: rgb(199, 199, 199)
+    }
+
+}

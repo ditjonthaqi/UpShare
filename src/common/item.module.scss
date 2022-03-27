@@ -1,0 +1,44 @@
+.item {
+    justify-content: space-between;
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    & svg {
+        visibility: hidden;
+        margin: 10px;
+        min-height: 20px;
+        min-width: 20px;
+    }
+
+    p {
+        overflow: hidden;   
+        text-overflow: ellipsis;     
+        vertical-align: middle;
+    }
+
+    &:hover {
+        & svg {
+            visibility: visible;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        & {
+            width: 100%;
+        }
+    }
+}
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    justify-content: space-around;
+    height: 300px;
+    @media only screen and (max-width: 600px) {
+        & {
+            width: 100%;
+            justify-content: center;
+            height: 200px;
+        }
+    }
+}

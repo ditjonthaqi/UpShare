@@ -1,0 +1,9 @@
+@import "../common/variables.scss";
+.paragraph {
+    margin: 10px;
+    color: $textcolor;
+    & a {
+        color: $darkorange;
+        text-decoration: none;
+    }
+}
