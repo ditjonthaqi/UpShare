@@ -25,6 +25,10 @@ const Accept: FC<AcceptProps> = props => {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        window.onbeforeunload = e => {
+            e.preventDefault();
+            indexedDB.deleteDatabase('radata');
+        }
         if (!secret || !location) {
             navigate('/');
         }
@@ -37,9 +41,7 @@ const Accept: FC<AcceptProps> = props => {
         return () => {
             for (let item of items) {
                 gun.get(location).put({ [item.name]: null });
-                console.log('hej');
             }
-            localStorage.removeItem('gun');
         }
 
     }, []);

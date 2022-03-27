@@ -4,7 +4,7 @@ import "https://cdn.jsdelivr.net/npm/gun/lib/radix.js";
 import "https://cdn.jsdelivr.net/npm/gun/lib/radisk.js"
 import "https://cdn.jsdelivr.net/npm/gun/lib/store.js";
 import "https://cdn.jsdelivr.net/npm/gun/lib/rindexed.js"
-const initStore = { gun: Gun({ localStorage: false, peers: ['233.255.255.255:8765/gun'] }), items: [] } as AppStore
+const initStore = { gun: Gun({ localStorage: false, peers: ['https://upshare-relay-server.herokuapp.com/gun'] }), items: [] } as AppStore
 const reducer: Reducer<AppStore, AppAction> = (store = initStore, action) => {
     if (action.type === "ADD_FILE") {
         const item = action.payload as Item;

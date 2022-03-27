@@ -37,7 +37,10 @@ const Go: FC<GoProps> = props => {
 
 
     useEffect(() => {
-        console.log(secret, location);
+        window.onbeforeunload = e => {
+            e.preventDefault();
+            indexedDB.deleteDatabase('radata');
+        }
         if (!secret || !location) {
             navigate('/');
         }
@@ -51,10 +54,7 @@ const Go: FC<GoProps> = props => {
         return () => {
             for (let item of items) {
                 gun.get(location).put({ [item.file.name]: null });
-                console.log('hej');
-                
             }
-            localStorage.removeItem('gun');
         }
     }, []);
 
